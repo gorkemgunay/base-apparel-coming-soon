@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ios safari remove shadow */
+input[type="email"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: auto;
+    background-image: linear-gradient(
+        135deg,
+        hsl(0, 0%, 100%),
+        hsl(0, 100%, 98%)
+    );
+}
+
+header .logo {
+    padding: 35px;
+}
+
+header .logo img {
+    width: 120px;
+}
+
+.left {
+    width: 100%;
+    padding: 60px 5%;
+}
+
+.left h1 {
+    font-size: 40px;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: hsl(0, 36%, 70%);
+    letter-spacing: 15px;
+    margin-right: -15px;
+}
+
+.left h1 span {
+    font-weight: 600;
+    color: hsl(0, 6%, 24%);
+}
+
+.left p {
+    color: hsl(0, 36%, 70%);
+    line-height: 1.7;
+    letter-spacing: 1px;
+    margin: 20px 0 30px 0;
+}
+
+.left form {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.left input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid hsla(0, 36%, 70%, 0.5);
+    border-radius: 40px;
+    padding-left: 20px;
+    background: transparent;
+}
+
+.left input::placeholder {
+    font-family: "Josefin Sans", sans-serif;
+    color: hsl(0, 36%, 70%);
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.left button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 0 10px 15px hsla(0, 74%, 74%, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.right {
+    height: 300px;
+    width: 100%;
+    background: url(images/hero-mobile.jpg) no-repeat center center / cover;
+}
+
+footer {
+    display: flex;
+
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        text-align: left;
+        position: relative;
+    }
+
+    header .logo {
+        position: absolute;
+        padding-left: 10%;
+        z-index: 99;
+    }
+
+    header .logo img {
+        width: 160px;
+    }
+
+    .left {
+        width: 100%;
+        height: 100vh;
+        padding-left: 10%;
+        padding-top: 25vh;
+        background: url(images/bg-pattern-desktop.svg) no-repeat center center /
+            cover;
+    }
+
+    .left h1 {
+        font-size: 60px;
+
+        letter-spacing: 20px;
+    }
+
+    .left p {
+        max-width: 480px;
+        width: 100%;
+        margin: 20px 0 40px;
+    }
+
+    .left form {
+        max-width: 480px;
+        width: 100%;
+    }
+
+    .right {
+        height: 100vh;
+        width: 80%;
+        background: url(images/hero-desktop.jpg) no-repeat center center / cover;
+    }
+}
